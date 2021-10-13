@@ -5,18 +5,19 @@ import firebase from 'firebase/app';
 import 'firebase/firestore';
 import 'firebase/auth';
 import 'firebase/analytics';
+import PropTypes from 'prop-types';
 
 import { useAuthState } from 'react-firebase-hooks/auth';
 import { useCollectionData } from 'react-firebase-hooks/firestore';
 
 firebase.initializeApp({
-  apiKey: "AIzaSyAkpQbE6Lv1OKtHQUkn_bdvw2a1fBhOVuA",
-  authDomain: "projecttwo-66060.firebaseapp.com",
-  projectId: "projecttwo-66060",
-  storageBucket: "projecttwo-66060.appspot.com",
-  messagingSenderId: "422447455058",
-  appId: "1:422447455058:web:fed92b21b3db93545a388b",
-  measurementId: "G-RKTRDF80RQ"
+  apiKey: "AIzaSyDk7VMMBwr6bqDsrzbUYGpnthHaMioYe2s",
+  authDomain: "chat-app-15946.firebaseapp.com",
+  projectId: "chat-app-15946",
+  storageBucket: "chat-app-15946.appspot.com",
+  messagingSenderId: "533178884935",
+  appId: "1:533178884935:web:ef9483d776d0107ffe6262",
+  measurementId: "G-P58VBCQ0SY"
 })
 
 const auth = firebase.auth();
@@ -111,7 +112,6 @@ function ChatRoom() {
   </>)
 }
 
-
 function ChatMessage(props) {
   const { text, uid, photoURL } = props.message;
 
@@ -125,5 +125,8 @@ function ChatMessage(props) {
   </>)
 }
 
+ChatMessage.propTypes = {
+  message: PropTypes.any,
+};
 
 export default App;
