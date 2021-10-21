@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 name: Run ESLint Pull Requests
 
 on:
@@ -19,3 +20,4 @@ jobs:
       # Install your dependencies
       - run: npx install-peerdeps --dev eslint-config-airbnb-base@14.2.1
       - run: npx eslint .
+
